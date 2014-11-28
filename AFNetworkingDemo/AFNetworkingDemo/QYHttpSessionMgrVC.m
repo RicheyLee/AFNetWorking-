@@ -7,6 +7,8 @@
 //
 
 #import "QYHttpSessionMgrVC.h"
+#import "AFNetworking/AFHTTPSessionManager.h"
+#import "common.h"
 
 @interface QYHttpSessionMgrVC ()
 
@@ -34,9 +36,34 @@
 }
 
 - (IBAction)postRequest:(id)sender {
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
+    manager.requestSerializer = [AFHTTPRequestSerializer serializer];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"request_post_body_http.json"];
+    
+    NSDictionary *parameters = @{@"foo":@"bar"};
+    
+    [manager POST:urlStr parameters:parameters success:^(NSURLSessionDataTask *task, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+        NSLog(@"%@", error);
+    }];
 }
 
 - (IBAction)mutiPartPost:(id)sender {
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"upload2server.json"];
+    
+    [manager POST:urlStr parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
+
+    } success:^(NSURLSessionDataTask *task, id responseObject) {
+
+    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+
+    }];
 }
 @end

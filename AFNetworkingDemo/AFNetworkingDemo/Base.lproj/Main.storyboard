@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PvM-2j-vbm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1385" y="-2311"/>
+            <point key="canvasLocation" x="-3097" y="-2007"/>
         </scene>
         <!--Main VC-->
         <scene sceneID="yev-Pc-giY">
@@ -145,7 +145,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M9v-Vc-iv6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1016" y="-2316"/>
+            <point key="canvasLocation" x="-2728" y="-2012"/>
         </scene>
         <!--HttpReqOp-->
         <scene sceneID="a3B-kN-fka">
@@ -176,7 +176,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yuw-0L-hss" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-512" y="-2991"/>
+            <point key="canvasLocation" x="-2088" y="-2495"/>
         </scene>
         <!--HttpReqOpMgr-->
         <scene sceneID="UVc-NK-YbS">
@@ -227,7 +227,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pAX-Rq-rRN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="-2401"/>
+            <point key="canvasLocation" x="-1490" y="-2049"/>
         </scene>
         <!--Network MonitorVC - AFNetworkReachMgr-->
         <scene sceneID="ezM-xF-WT0">
@@ -261,7 +261,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zor-Ls-YGm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1464" y="-1450"/>
+            <point key="canvasLocation" x="-3176" y="-1146"/>
         </scene>
         <!--Http Session MgrVC - AFHttpSessionMgr-->
         <scene sceneID="TZ8-tI-R7w">
@@ -312,7 +312,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E9O-G1-fkf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1016" y="-1412"/>
+            <point key="canvasLocation" x="-2728" y="-1108"/>
         </scene>
         <!--Session MgrVC - AFURLSessionMgr-->
         <scene sceneID="h4V-c9-a8x">
@@ -390,7 +390,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="viC-7X-xfT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-512" y="-1711"/>
+            <point key="canvasLocation" x="-2224" y="-1407"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
