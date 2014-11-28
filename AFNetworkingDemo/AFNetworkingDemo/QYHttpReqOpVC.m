@@ -7,6 +7,8 @@
 //
 
 #import "QYHttpReqOpVC.h"
+#import "AFNetworking/AFHTTPRequestOperation.h"
+#import "common.h"
 
 @interface QYHttpReqOpVC ()
 
@@ -27,6 +29,27 @@
 }
 
 - (IBAction)httpGetReq:(id)sender {
+    NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"request_get.json"];
     
+//    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    NSDictionary *parameters = @{@"foo":@"bar"};
+    
+//    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSMutableURLRequest *request = [[AFHTTPRequestSerializer serializer] requestWithMethod:@"GET" URLString:urlStr parameters:parameters error:nil];
+    
+    NSLog(@"url:%@", request.URL);
+    
+    AFHTTPRequestOperation *op = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    
+    op.responseSerializer = [AFJSONResponseSerializer serializer];
+    
+    [op setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSLog(@"%@", responseObject);
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"%@", error);
+    }];
+    
+     [[NSOperationQueue mainQueue] addOperation:op];
 }
 @end
