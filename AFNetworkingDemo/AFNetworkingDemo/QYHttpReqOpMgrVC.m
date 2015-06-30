@@ -12,6 +12,7 @@
 
 @interface QYHttpReqOpMgrVC ()
 
+@property (weak, nonatomic) IBOutlet UILabel *label;
 @end
 
 @implementation QYHttpReqOpMgrVC
@@ -28,7 +29,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    [self postURLFormEncodedReq:nil];
+    
+       // Do any additional setup after loading the view.
 }
 
 - (IBAction)getRequest:(id)sender {
@@ -60,7 +63,14 @@
     
     [manager POST:urlStr parameters:parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSLog(@"%@", responseObject);
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        _label.text = @"nihao";
+//        dispatch_async(dispatch_get_main_queue(), ^{
+//            _label.text = responseObject;
+//
+//        });
+
+
+            } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"%@", error);
     }];
     
@@ -86,5 +96,7 @@
         NSLog(@"Error: %@", error);
     }];
 }
+
+
 
 @end

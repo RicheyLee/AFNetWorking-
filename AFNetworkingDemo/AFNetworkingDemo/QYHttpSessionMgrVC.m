@@ -42,6 +42,7 @@
     manager.responseSerializer = [AFJSONResponseSerializer serializer];
     
     NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"request_post_body_http.json"];
+   // NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"register.php"];
     
     NSDictionary *parameters = @{@"foo":@"bar"};
     
@@ -56,7 +57,9 @@
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     
-    NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"upload2server.json"];
+   // NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"upload2server.json"];
+    NSString *urlStr = [kBaseURL stringByAppendingPathComponent:@"register.php"];
+
     
     [manager POST:urlStr parameters:nil constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 

@@ -15,6 +15,9 @@
 @property (weak, nonatomic) IBOutlet UIProgressView *uploadProgress;
 @property (weak, nonatomic) IBOutlet UIProgressView *mutiPartProgress;
 
+
+@property (weak, nonatomic) IBOutlet UILabel *label;
+
 @end
 
 @implementation QYURLSessionMgrVC

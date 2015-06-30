@@ -9,6 +9,10 @@
 #ifndef AFNetworkingDemo_common_h
 #define AFNetworkingDemo_common_h
 
+//#define kBaseURL    @"http://61.163.77.102:88"
+
 #define kBaseURL    @"http://afnetworking.sinaapp.com"
+
+
 
 #endif
